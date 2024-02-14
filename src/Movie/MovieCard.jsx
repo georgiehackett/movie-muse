@@ -1,9 +1,20 @@
 import React,{useEffect, useState} from "react";
 
-function Movie() {
+function MovieCards() {
     const getMovie = ()=>{
-        fetch("https://api.themoviedb.org/3/discover/movie?api_key=2197d5ce46768a87c8eb8f1773fec019")
+        fetch("https://api.themoviedb.org/3/discover/movie?api_key=131c856f75867823ef322849c2612110")
        .then(res => res.json())
-       .then(json => setMovieList(json.results))
+       .then(json => console.log(json.results))
     }
+    //Call getMovie function with a useEffect hook
+    useEffect(()=>{
+        getMovie()
+    },[])
+    return(
+        <>
+        <h1>Here are the movie cards</h1>
+        </>
+    )
 }
+
+export default MovieCards

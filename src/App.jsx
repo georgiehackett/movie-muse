@@ -1,10 +1,11 @@
 import React from 'react';
+import moviecard from './Movie/MovieCard';
 import './App.css';
 
 function App() {
   return (
     <>
-      <h1>Hi</h1>
+      <moviecard/>
     </>
   );
 }
