@@ -18,10 +18,10 @@ function MovieCards() {
     <div className="CardDisplay">
         {movieList.map((movie)=>(
             <div  key={movie.id}>
-            <img  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
-            <h1>{movie.title}</h1>
-            <h3>{movie.release_date}</h3>
-            <h3>Rating:{movie.adult}</h3>
+            <img  src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt={movie.title} />
+            <h3>{movie.title}</h3>
+            <h5>{movie.release_date}</h5>
+        
             </div>
             )
         )}
