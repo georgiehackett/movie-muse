@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // If you are using React Router
 
+
+
 const Navbar = () => {
   return (
+    <>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">Home</Link>
@@ -21,6 +24,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+    </>
   );
 };
 
