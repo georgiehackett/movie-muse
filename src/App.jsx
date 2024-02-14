@@ -1,6 +1,6 @@
 import React from 'react';
 import Moviecard from './Movie/MovieCard';
-//import './App.css';
+import './App.css';
 
 function App() {
   return (

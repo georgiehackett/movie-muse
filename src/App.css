@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 } */
+.CardDetails{
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content:space-around;
+}
