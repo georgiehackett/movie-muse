@@ -40,3 +40,26 @@
 .read-the-docs {
   color: #888;
 } */
+.CardDisplay{
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content:space-around;
+}
+
+.movieCardContainer{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.CardTitle{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  color: brown;
+  width: 200px;
+
+}
