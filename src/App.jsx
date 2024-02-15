@@ -7,8 +7,8 @@ import './App.css';
 
 const App = () => {
   return (
-      <Navbar/>
     <>
+      <Navbar/>
       <Hero />
       {/* Other components or content */}
       <MovieCard />
