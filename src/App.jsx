@@ -4,8 +4,8 @@ import Navbar from './navbar/navbar';
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <h1>Main Content Goes Here</h1>
+      {/* <Navbar /> */}
+      <h1>Main Content Here</h1>
     </div>
   );
 };
