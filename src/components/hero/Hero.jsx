@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+function Hero() {
   return (
     <div className="hero">
       <div className="hero-content">
@@ -15,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default Hero;
