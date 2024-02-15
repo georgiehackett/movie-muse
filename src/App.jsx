@@ -7,9 +7,7 @@ function App() {
   return (
     <>
       <Hero />
-      {/* Other components or content */}
       <MovieCard />
-      {/* Other components or content */}
     </>
   );
 }
