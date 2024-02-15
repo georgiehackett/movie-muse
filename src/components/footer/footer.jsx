@@ -19,10 +19,24 @@ function Footer() {
             </div>
             </div>
             <div className="col-md-6 col-lg-3 col-12">
-        
+            <h3>Quick Links</h3>
+                <ul>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/">Test 1</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/">Test 2</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/">Test 3</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/">Test 4</a>
+                    </li>
+                </ul>
             </div>
             <div className="col-md-6 col-lg-4 col-12"></div>
-    
+            
             </div>
             </div>
         </div>
