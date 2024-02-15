@@ -10,9 +10,7 @@ const App = () => {
     <>
       <Navbar/>
       <Hero />
-      {/* Other components or content */}
       <MovieCard />
-      {/* Other components or content */}
     </>
   );
 };
