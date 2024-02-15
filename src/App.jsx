@@ -4,10 +4,7 @@ import { Router } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <h1>Main Content Here</h1>
-    </div>
+      <Navbar/>
   );
 };
 

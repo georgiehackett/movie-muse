@@ -28,4 +28,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-// set up router -link part
