@@ -6,10 +6,7 @@ import FavouritesIcon from './FavouritesIcon/FavouritesIcon';
 function App() {
   return (
     <>
-   
-      {/* <Moviecard/> */}
-      <FavouritesIcon />
-      
+      <Moviecard favouriteComponent={FavouritesIcon} />
     </>
   );
 }
