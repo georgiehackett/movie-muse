@@ -1,0 +1,29 @@
+/* ... (previous styles) */
+
+.search-container {
+    margin-top: 2rem;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 70%;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #61dafb;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #4fa3d1;
+  }
+  
