@@ -1,0 +1,33 @@
+.jumbotron {
+  background-color: #ffe492;
+  color: #fff; 
+  padding: 60px 30px; 
+  border-radius: 10px; 
+}
+
+.jumbotron h1 {
+  font-size: 5rem; 
+  font-style: bold;
+}
+
+.jumbotron .lead {
+  font-size: 2rem; 
+}
+
+.jumbotron hr {
+  border-color: #fff; 
+  margin-top: 5rem; 
+}
+
+.input-group {
+  margin-top: 1rem; 
+}
+
+
+.input-group input {
+  border-radius: 5px 0 0 5px; 
+}
+
+.input-group button {
+  border-radius: 0 5px 5px 0; 
+}
