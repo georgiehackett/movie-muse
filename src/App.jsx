@@ -9,6 +9,3 @@ const App = () => {
 };
 
 export default App;
-// set up links
-// paths set up
-// stykibng - 
