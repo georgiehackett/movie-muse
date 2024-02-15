@@ -5,11 +5,10 @@ function App() {
   return (
     <div className="hero">
       <div className="hero-content">
-        <h1>Your Title</h1>
-        <p>Your subtitle or tagline goes here.</p>
+        <h1>Search</h1>
         <div className="search-container">
           <input type="text" placeholder="Search..." />
-          <button>Search</button>
+          <button>Go</button>
         </div>
       </div>
     </div>
