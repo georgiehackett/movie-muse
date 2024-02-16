@@ -1,33 +1,40 @@
-.jumbotron {
+/* .jumbotron {
   background-color: #ffe492;
   color: #fff; 
   padding: 60px 30px; 
   border-radius: 10px; 
+} */
+
+.jumbotron {
+  background: url('tumblr_n19f0274mT1s8gf9ko5_500.gif') center/cover no-repeat;
+  color: #ffeb32; 
+  padding: 60px 30px; 
+  border-radius: 10px; 
+  margin-bottom: 20px;
 }
 
 .jumbotron h1 {
-  font-size: 5rem; 
+  font-size: 5rem;
   font-style: bold;
 }
 
 .jumbotron .lead {
-  font-size: 2rem; 
+  font-size: 2rem;
 }
 
 .jumbotron hr {
-  border-color: #fff; 
-  margin-top: 5rem; 
+  border-color: #fff;
+  margin-top: 5rem;
 }
 
 .input-group {
-  margin-top: 1rem; 
+  margin-top: 1rem;
 }
 
-
 .input-group input {
-  border-radius: 5px 0 0 5px; 
+  border-radius: 5px 0 0 5px;
 }
 
 .input-group button {
-  border-radius: 0 5px 5px 0; 
+  border-radius: 0 5px 5px 0;
 }
