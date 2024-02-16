@@ -1,9 +1,28 @@
-//test
-
-import React from 'react';
+import React,{useEffect, useState} from "react";
 import './Hero.css';
 
+const API_KEY="131c856f75867823ef322849c2612110";
+
 const JumbotronSearch = () => {
+  const [query, setQuery] = useState(""); 
+  const [results,setResult] = useState([]);
+
+ 
+  const onChange = (e) =>{
+    e.preventDefault();
+    const Search_url= `https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&api_key=${API_KEY}&query=${e.target.value}`
+    setQuery(e.target.value);
+
+    fetch(`${Search_url}`)
+       .then(res => res.json())
+       .then(data =>{ 
+        if(!data.errors) {
+          setResult(data.results)
+          console.log(data.results);
+        }
+        });
+  };
+
   return (
     <div className="jumbotron">
       <h1 className="display-4">Welcome to Movie Muse</h1>
@@ -14,6 +33,8 @@ const JumbotronSearch = () => {
           type="text"
           className="form-control"
           placeholder="Search for movies..."
+          value={query}
+          onChange={onChange}
         />
         {/* <button className="btn btn-primary" type="button">
           Search
