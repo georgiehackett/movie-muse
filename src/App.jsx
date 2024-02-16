@@ -1,24 +1,21 @@
-/* import React from 'react';
+/* import Navbar from './navbar/navbar'; */
+import { Router } from 'react-router-dom';
+import React from 'react';
+/* import Hero from './Hero/Hero';  */
+import Footer from './footer/footer'; 
+/* import MovieCard from './Movie/MovieCard'; */
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <>
-      <h1>Hi</h1>
-      <Footer />
+      {/* <Navbar/>
+      <Hero />
+      <MovieCard /> */
+      <Footer />}
+      
     </>
   );
-}
+};
 
-export default App; */
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from '../src/components/footer/footer.jsx'
-import './index.css'
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Footer />
-  </React.StrictMode>,
-)
+export default App;

@@ -9,7 +9,7 @@ function Footer() {
             <div className="container">
             <div className="row">
             <div className="col-md-6 col-lg-5 col-12 ft-1">
-                <a className="navbar-brand" href="/"><img src="" alt="" />Movie Muse</a>
+                <h3><span>Movie</span>Muse</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque hic, accusantium veniam eveniet perferendis corrupti tenetur amet accusamus consequatur possimus quisquam eum labore placeat voluptatum iure, aspernatur, unde quasi perspiciatis.</p>
             <div className="footer-icons">
             <i class="fa-brands fa-facebook"></i>
@@ -43,10 +43,6 @@ function Footer() {
             </div>
             </div>
         </div>
-        
-        
-        
-        
         </>
     );
 }
