@@ -2,7 +2,7 @@ import React,{useEffect, useState} from "react";
 import './Hero.css';
 
 const API_KEY="131c856f75867823ef322849c2612110";
-
+const Image_url = "https://image.tmdb.org/t/p/w200/";
 const JumbotronSearch = () => {
   const [query, setQuery] = useState(""); 
   const [results,setResult] = useState([]);
@@ -18,7 +18,7 @@ const JumbotronSearch = () => {
        .then(data =>{ 
         if(!data.errors) {
           setResult(data.results)
-          console.log(data.results);
+          //console.log(data.results);
         }
         });
   };
@@ -40,6 +40,20 @@ const JumbotronSearch = () => {
           Search
         </button> */}
       </div>
+      {results.length >0 && (
+        <div className="CardDisplay">
+        {results.map((movie)=>(
+            <div className="movieCardContainer" key={movie.id}>
+              <img  src={Image_url + `${movie.poster_path}`} alt={movie.title} />
+               <h3 className="CardTitle">{movie.title}</h3>
+            <h5>{movie.release_date}</h5>
+        
+            </div>
+            )
+        )}
+    </div>
+      )
+      }
     </div>
   );
 };
