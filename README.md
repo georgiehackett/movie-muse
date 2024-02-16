@@ -14,26 +14,24 @@
   </div>
 
 ## Deployed page URL
-[Cities-Weather-Dashboard](https://addy306.github.io/prof-README-generator/)
+Link: -Insert link here-
 
 
 ## Description
-In this project I created a weather dashboard that runs in the browser and feature dynamically updated HTML and CSS.
 
-  * When a user searches for a city they are presented with current and future conditions for that city and that city is added to the search history
-  * When a user views the current weather conditions for that city they are presented with:
-    * The city name
-    * The date
-    * An icon representation of weather conditions
-    * The temperature
-    * The humidity
-    * The wind speed
-  * When a user view future weather conditions for that city they are presented with a 5-day forecast that displays:
-    * The date
-    * An icon representation of weather conditions
-    * The temperature
-    * The humidity
-  * When a user click on a city in the search history they are again presented with current and future conditions for that city
+A web application which enables the user to make informed decisions on movies, from general popular movies to specific movies, enabled through searching the database which uses 'The Movie Database (TMDB)' API (https://developer.themoviedb.org/docs/getting-started) to achieve the desired results inputed from the client-side.
+
+This project features a movie database, giving the user the option to search through:
+
+  * Category
+  * Trending Movies
+  * Specific Movies By Title
+
+It can also provide the user with information including:
+  * Synposis
+  * Cast
+  * Rating
+
 
 ## Table of Contents
 - [Installation](#installation)
@@ -45,11 +43,17 @@ In this project I created a weather dashboard that runs in the browser and featu
 
 <!-- Add installation instructions here -->
 ## Installation 
-HTTPS: git clone https://github.com/addy306/Cities-Weather-Dashboard.git
+Follow these steps to set up and run the project locally:
 
-SSH: git clone git@github.com:addy306/Cities-Weather-Dashboard.git
+- Please clone the repository using either SSH or HTTPS
 
-<!-- Add usage information here -->
+Ensure that you have the following installed on your machine prior to running the application:
+- [Node.js](https://nodejs.org/) installed on your machine.
+- [npm](https://www.npmjs.com/) (Node Package Manager) installed.
+
+Then:
+- $npm i
+- $npm run dev
 ## Usage 
 Simply click on deployed url and enter your desired city in the input 
 
@@ -58,34 +62,37 @@ Simply click on deployed url and enter your desired city in the input
 ### Screenshots, Videos, GIF
 
 ### Screenshot of App Desktop View
-![Screenshot of Webpage](./images/desktop-view.JPG)
+- Screenshot
 
 ### GIF of App been used
-![GIF of App](./images/weather-gif)
-
+- Gif
 ### GIF of App responsivness
-![Responsive](./images/responsive-gif)
+- Gif 2
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 <!-- Add contributing guidelines here -->
 ## Contributing
-Feel free to contribute to make it better.
+
+https://github.com/georgiehackett <br />
+https://github.com/addy306 <br />
+https://github.com/vlee109 <br />
+https://github.com/abdeeg 
 
 <!-- Add information about how to run tests here -->
 ## Tests 
-Test in browser
+Test using $npm run dev
 
 ## Built With
 * Javascript
 * HTML 
 * CSS
 * Boostrap
-* Weather API
+* TMBD API
+* React
 
 
 ## Questions
-If you have any questions, feel free to contact me:
-- GitHub: 
-- Email: 
+If you have any questions, feel free to reach out.
