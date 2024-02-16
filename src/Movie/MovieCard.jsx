@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from "react";
 
-
+const Image_url = "https://image.tmdb.org/t/p/w200/";
 function MovieCards() {
     const [movieList,setMovieList] = useState([])
     const getMovie = ()=>{

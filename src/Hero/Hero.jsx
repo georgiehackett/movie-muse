@@ -15,9 +15,9 @@ const JumbotronSearch = () => {
           className="form-control"
           placeholder="Search for movies..."
         />
-        <button className="btn btn-primary" type="button">
+        {/* <button className="btn btn-primary" type="button">
           Search
-        </button>
+        </button> */}
       </div>
     </div>
   );
