@@ -4,6 +4,7 @@ import './App.css';
 import FavouritesIcon from './FavouritesIcon/FavouritesIcon';
 
 function App() {
+  console.log(FavouritesIcon);
   return (
     <>
       <Moviecard favouriteComponent={FavouritesIcon} />
