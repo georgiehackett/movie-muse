@@ -6,6 +6,12 @@ import FavouritesIcon from './FavouritesIcon/FavouritesIcon';
 function App() {
   const [favouriteMovies, setFavouriteMovies] = useState([]);
 
+  const addFavouriteMovie = movie => {
+    setFavouriteMovies(prev => {
+      return [movie, ...prev];
+    });
+  };
+
   return (
     <>
       <Moviecard favouriteComponent={FavouritesIcon} />

@@ -22,7 +22,7 @@ function MovieCards(props) {
     <>
       <div className="CardDisplay">
         {movieList.map(movie => (
-          <div className="movieCardContainer" key={movie.id}>
+          <div className="movieCardContainer." key={movie.id}>
             <img
               src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
               alt={movie.title}
