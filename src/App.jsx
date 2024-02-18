@@ -4,7 +4,8 @@ import './App.css';
 import FavouritesIcon from './FavouritesIcon/FavouritesIcon';
 
 function App() {
-  console.log(FavouritesIcon);
+  const [favouriteMovies, setFavouriteMovies] = useState([]);
+
   return (
     <>
       <Moviecard favouriteComponent={FavouritesIcon} />
