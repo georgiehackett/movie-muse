@@ -1,14 +1,27 @@
-.CardDisplay{
-  display: flex;
-  flex-wrap: wrap;
-  align-items:center;
-  justify-content:space-around;
+.movie-app > .row {
+	overflow-x: auto;
+	flex-wrap: nowrap;
 }
 
-.movieCardContainer{
-  display: flex;
-  flex-direction: column;
-  align-items:center;
+/* Override Bootstrap's default styles */
+/* .row > * {
+  width: auto; /* Set width to auto 
+} */
+
+
+.image-container {
+	position: relative;
+	transition: transform 0.2s;
+  width: auto;
+}
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
 }
 
 .CardTitle{
@@ -21,22 +34,4 @@
   width: 200px;
 
 
-}
-.movie-app > .row {
-	overflow-x: auto;
-	flex-wrap: nowrap;
-}
-
-.image-container {
-	position: relative;
-	transition: transform 0.2s;
-}
-
-.image-container:hover {
-	cursor: pointer;
-	transform: scale(1.1);
-}
-
-.image-container:hover .overlay {
-	opacity: 1;
 }
