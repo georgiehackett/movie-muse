@@ -91,19 +91,21 @@ const MovieDetails = () => {
             {/* cast */}
             <div className='flex flex-col items-center'>
               <h1 className=" text-primary font-semibold text-center p-2">Cast</h1>
+              <div className="container-fluid movie-app">
               <div className="row">
               <div className='image-container d-flex justify-content-start m-3' >
                 {castdata.map((cast) => (
                   <div key={cast.id}>
                     {cast.profile_path !== null ? <>
-                      <div className='flex min-w-[9rem] md:min-w-[10rem] max-w-[9rem] md:max-w-[10rem] h-full items-center text-center flex-col mx-1'>
-                        <LazyLoadImage effect='blur' src={"https://image.tmdb.org/t/p/w200" + cast.profile_path} className="w-full h-full rounded-xl" />
-                        <p className='text-white'>{cast.name}</p>
-                        <p className='text-blue-300'>({cast.character})</p>
+                      <div className='flex items-center text-center flex-col mx-1'>
+                        <LazyLoadImage effect='blur' src={"https://image.tmdb.org/t/p/w200" + cast.profile_path} className="rounded" />
+                        <p className='text-black'>{cast.name}</p>
+                        <p className='text-primary'>({cast.character})</p>
                       </div>
                     </> : null}
                   </div>
                 ))}
+              </div>
               </div>
               </div>
             </div>
