@@ -12,9 +12,9 @@ function Footer() {
                 <h3><span>Movie</span>Muse</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque hic, accusantium veniam eveniet perferendis corrupti tenetur amet accusamus consequatur possimus quisquam eum labore placeat voluptatum iure, aspernatur, unde quasi perspiciatis.</p>
             <div className="footer-icons">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-            <i class="fa-brands fa-linkedin"></i>
+            <i className="fa-brands fa-facebook"></i>
+            <i className="fa-brands fa-x-twitter"></i>
+            <i className="fa-brands fa-linkedin"></i>
             </div>
             </div>
             <div className="col-md-6 col-lg-3 col-12 ft-2">
@@ -36,9 +36,9 @@ function Footer() {
             </div>
             <div className="col-md-6 col-lg-4 col-12 ft-3">
             <h5>Quick Links</h5>
-            <p><i class="fa-solid fa-phone"></i>+44 9823742935 235</p>
-            <p><i class="fa-solid fa-envelope"></i>aksgfasfhasf@gmail.com</p>
-            <p><i class="fa-solid fa-location-dot"></i>Birmingham, England</p>
+            <p><i className="fa-solid fa-phone"></i>+44 9823742935 235</p>
+            <p><i className="fa-solid fa-envelope"></i>aksgfasfhasf@gmail.com</p>
+            <p><i className="fa-solid fa-location-dot"></i>Birmingham, England</p>
             </div>
             </div>
             </div>
