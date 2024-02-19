@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Moviecard from './Movie/MovieCard';
 import './App.css';
 import FavouritesIcon from './FavouritesIcon/FavouritesIcon';
 
-function App() {
+function App() {  
   const [favouriteMovies, setFavouriteMovies] = useState([]);
 
-  const addFavouriteMovie = movie => {
-    setFavouriteMovies(prev => {
-      return [movie, ...prev];
-    });
+  const addFavouriteMovies = movie => {
+    setFavouriteMovies([...favouriteMovies, movie])
   };
+
+  console.log(favouriteMovies);
 
   return (
     <>
-      <Moviecard favouriteComponent={FavouritesIcon} />
+      <Moviecard
+        favouritesIcon={FavouritesIcon}
+        favouriteComponent={FavouritesIcon}
+        handleFavouriteMoviesClick={addFavouriteMovies}
+      />
     </>
   );
 }

@@ -15,22 +15,21 @@ function MovieCards(props) {
   }, []);
   //  console.log(movieList);
 
-  const FavouritesComponent = props.favouritesComponent;
-  // console.log(FavouritesComponent);
+  const FavourtiesIcon = props.favouritesIcon;
 
   return (
     <>
       <div className="CardDisplay">
         {movieList.map(movie => (
-          <div className="movieCardContainer." key={movie.id}>
+          <div className="movieCardContainer" key={movie.id}>
             <img
               src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
               alt={movie.title}
             />
             <h3 className="CardTitle">{movie.title}</h3>
             <h5>{movie.release_date}</h5>
-            <div className="overlay">
-              <FavouritesIcon />
+            <div className="overlay" onClick={() => props.handleFavouriteMoviesClick(movie)} >
+              <FavouritesIcon  />
             </div>
           </div>
         ))}
