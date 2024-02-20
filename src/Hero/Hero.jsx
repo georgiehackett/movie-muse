@@ -41,10 +41,12 @@ const JumbotronSearch = () => {
         </button> */}
       </div>
       {results.length >0 && (
-        <div className="CardDisplay">
+         <div className="row popular-card">
         {results.map((movie)=>(
-            <div className="movieCardContainer" key={movie.id}>
+            <div className="image-container justify-content-start m-3" key={movie.id}>
+              <a href={`/moviedetail/${movie.id}`}>
               <img  src={Image_url + `${movie.poster_path}`} alt={movie.title} />
+              </a>
                <h3 className="CardTitle">{movie.title}</h3>
             <h5>{movie.release_date}</h5>
         
