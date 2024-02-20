@@ -1,25 +1,21 @@
-/* .jumbotron {
-  background-color: #ffe492;
-  color: #fff; 
-  padding: 60px 30px; 
-  border-radius: 10px; 
-} */
-
 .jumbotron {
-  background: url('tumblr_n19f0274mT1s8gf9ko5_500.gif') center/cover no-repeat;
-  color: #ffeb32; 
-  padding: 60px 30px; 
-  border-radius: 10px; 
-  margin-bottom: 20px;
+  /* background: url('tumblr_n19f0274mT1s8gf9ko5_500.gif') center/cover no-repeat; */
+  color: #000000;
+  padding: 60px 30px;
+  border-radius: 10px;
+  margin-bottom: 0px;
+  text-align: center;
 }
 
 .jumbotron h1 {
   font-size: 5rem;
-  font-style: bold;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .jumbotron .lead {
   font-size: 2rem;
+  font-weight: bold;
 }
 
 .jumbotron hr {
@@ -32,9 +28,17 @@
 }
 
 .input-group input {
-  border-radius: 5px 0 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  padding: 10px 20px;
+  width: 60%;
+  font-size: 1.5rem;
 }
 
 .input-group button {
-  border-radius: 0 5px 5px 0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
 }
