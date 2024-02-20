@@ -19,7 +19,7 @@ const App = () => {
   <Routes>
       <Route path="/" element={<PopularMovie />} />
       {/* <Route path="/popularmovies" element={<PopularMovies />} /> */}
-      <Route path='/moviedetail/:id' element={<MovieDetails addToFavouritesIcon={AddToFavourites}/>} />
+      <Route path='/moviedetail/:id' element={<MovieDetails addToFavouritesIcon={AddToFavourites} />} />
     </Routes> 
       
       <Footer />

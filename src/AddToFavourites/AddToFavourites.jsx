@@ -1,9 +1,8 @@
 import React from 'react';
-import './FavouritesIcon.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
-function FavouritesIcon() {
+function AddToFavourites() {
   return (
     <>
       <span id="favourites-text mr-3">Add to Favourties</span>
@@ -12,4 +11,4 @@ function FavouritesIcon() {
   );
 }
 
-export default FavouritesIcon;
+export default AddToFavourites;
