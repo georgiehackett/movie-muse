@@ -3,7 +3,8 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import React from 'react';
 import Hero from './Hero/Hero';  
 import Footer from './footer/footer'; 
- import PopularMovie from './Movie/PopularMovie'; 
+ import PopularMovie from './Movie/PopularMovie';
+ import AddToFavourites from './AddToFavourites/AddToFavourites'; 
 
 import './App.css';
 import MovieDetails from './Movie/MovieDetails';
@@ -18,7 +19,7 @@ const App = () => {
   <Routes>
       <Route path="/" element={<PopularMovie />} />
       {/* <Route path="/popularmovies" element={<PopularMovies />} /> */}
-      <Route path='/moviedetail/:id' element={<MovieDetails />} />
+      <Route path='/moviedetail/:id' element={<MovieDetails addToFavouritesIcon={AddToFavourites}/>} />
     </Routes> 
       
       <Footer />
