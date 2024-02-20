@@ -5,9 +5,11 @@ import Hero from './Hero/Hero';
 import Footer from './footer/footer'; 
  import PopularMovie from './Movie/PopularMovie'; 
  import TopRated from './Movie/TopRated';
+ import NowPlaying from './Movie/NowPlaying';
 
 import './App.css';
 import MovieDetails from './Movie/MovieDetails';
+import Upcoming from './Movie/Upcoming';
 
 const App = () => {
   return (
@@ -21,7 +23,8 @@ const App = () => {
       <Route path="/popularmovies" element={<PopularMovie />} /> 
       <Route path='/moviedetail/:id' element={<MovieDetails />} />
       <Route path='/toprated' element={<TopRated />} />
-
+      <Route path='/upcoming' element={<Upcoming />} />
+      <Route path='/nowplaying' element={<NowPlaying />} />
     </Routes> 
       
       <Footer />

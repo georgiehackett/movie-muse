@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet,Link } from 'react-router-dom';
-import PopularMovie from '../Movie/PopularMovie'; 
+
 
 
 const Navbar = () => {
@@ -22,6 +22,9 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/Upcoming">Upcoming</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/NowPlaying">Now Playing</Link>
             </li>
           </ul>
         </div>
