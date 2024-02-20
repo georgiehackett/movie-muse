@@ -6,6 +6,7 @@ const Popular_url = `https://api.themoviedb.org/3/discover/movie?include_adult=f
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import AddToFavourites from '../AddToFavourites/AddToFavourites';
+import RemoveFromFavourites from '../RemoveFromFavourites/RemoveFromFavourites';
 
 function PopularMovies(props) {
   const [movieList, setMovieList] = useState([]);
@@ -33,7 +34,7 @@ function PopularMovies(props) {
     setFavouriteMovies(newFavouriteMovies);
   };
 
-    console.log(favouriteMovies);
+  console.log(favouriteMovies);
 
   return (
     <div className="container-fluid movie-app">
@@ -57,6 +58,9 @@ function PopularMovies(props) {
               onClick={() => handleFavouriteMoviesClick(movie)}
             >
               <AddToFavourites />
+            </div>
+            <div className="overlay">
+                <RemoveFromFavourites />
             </div>
           </div>
         ))}
