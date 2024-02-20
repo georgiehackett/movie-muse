@@ -24,7 +24,7 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<PopularMovie />} />
-          <Route path="/popularmovies" element={<PopularMovie addToFavourites={AddToFavourites} handleFavouriteMoviesClick={addFavouriteMovies} />} /> 
+          <Route path="/popularmovies" element={<PopularMovie handleFavouriteMoviesClick={addFavouriteMovies} />} /> 
           <Route
             path="/moviedetail/:id"
             element={<MovieDetails />}

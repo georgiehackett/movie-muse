@@ -3,6 +3,9 @@ const API_KEY = '131c856f75867823ef322849c2612110';
 const Image_url = 'https://image.tmdb.org/t/p/w200/';
 const Popular_url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&api_key=${API_KEY}`;
 // const Search_url= `https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&api_key=${process.env.API_KEY}&query=`
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import AddToFavourites from '../AddToFavourites/AddToFavourites';
 
 function PopularMovies(props) {
 
@@ -16,8 +19,6 @@ function PopularMovies(props) {
   useEffect(() => {
     getMovie();
   }, []);
-
-  const AddToFavourites = props.addToFavourites;
 
   return (
     <div className="container-fluid movie-app">
@@ -37,7 +38,7 @@ function PopularMovies(props) {
             <h3 className="CardTitle">{movie.title}</h3>
             <h5>{movie.release_date}</h5>
             <div className="overlay" onClick={() => props.handleFavouriteMoviesClick(movie)}>
-              <AddToFavourites />
+            <AddToFavourites />
             </div>
           </div>
         ))}
