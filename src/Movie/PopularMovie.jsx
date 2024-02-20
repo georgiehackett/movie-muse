@@ -59,8 +59,11 @@ function PopularMovies(props) {
             >
               <AddToFavourites />
             </div>
-            <div className="overlay">
-                <RemoveFromFavourites />
+            <div
+              className="overlay"
+              onClick={() => handleRemoveFavouriteMoviesClick(movie)}
+            >
+              <RemoveFromFavourites />
             </div>
           </div>
         ))}
