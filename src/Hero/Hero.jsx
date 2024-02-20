@@ -2,11 +2,13 @@ import React,{useEffect, useState} from "react";
 import './Hero.css';
 import MovieCard from "../Movie/MovieCard";
 
+
 const API_KEY="131c856f75867823ef322849c2612110";
 
 const JumbotronSearch = () => {
   const [query, setQuery] = useState(""); 
   const [results,setResult] = useState([]);
+  //const [movieList,setMovieList] = useState([])
 
  
   const onChange = (e) =>{
@@ -23,7 +25,15 @@ const JumbotronSearch = () => {
         }
         });
   };
+ /*  const getMovie = ()=>{
 
+    fetch(`${Search_url}`)
+   .then(res => res.json())
+   .then(json => setMovieList(json.results))
+}
+useEffect(()=>{
+    getMovie()
+},[]) */
   return (
     <div className="jumbotron">
       <h1 className="display-4">Welcome to Movie Muse</h1>
@@ -42,7 +52,7 @@ const JumbotronSearch = () => {
         </button> */}
       </div>
       {results.length >0 && (
-      <MovieCard movieList={movieList}/>
+      <MovieCard movieList={results}/>
       )
       }
     </div>
