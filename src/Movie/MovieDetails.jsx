@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-// import { HiChevronLeft } from 'react-icons/hi';
+import React, { useEffect, useState } from 'react'
+import { useParams,Link } from 'react-router-dom'
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import noimage from '../assets/images/no-image.jpg';
 // import { FaPlay } from 'react-icons/fa';
 // import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -58,22 +58,19 @@ const MovieDetails = () => {
 
   return (
     <>
-      {/* poster */}
-      {/* <h1 className='text-black text-center'>{moviedet.title}</h1> */}
-      <div className="relative h-auto md:h-[82vh] flex justify-center">
-        {/*  <div className='h-full w-full shadowbackdrop absolute'></div> */}
-        <h1 className="text-black text-center">{moviedet.title}</h1>
-        {moviedet.backdrop_path === null ? (
-          <img src={noimage} className="img-fluid rounded" />
-        ) : (
-          <img
-            src={
-              'https://image.tmdb.org/t/p/original/' + moviedet.backdrop_path
-            }
-            className="img-fluid rounded"
-          />
-        )}
-      </div>
+        <Link to="/" className='fixed z-10 text-4xl text-black bg-white m-3 md:m-5 rounded-full'><HiChevronLeft />Home<HiChevronRight /></Link>
+
+            {/* poster */}
+            {/* <h1 className='text-black text-center'>{moviedet.title}</h1> */}
+            <div className='relative h-auto md:h-[82vh] flex justify-center'>
+             {/*  <div className='h-full w-full shadowbackdrop absolute'></div> */}
+              <h1 className='text-black text-center'>{moviedet.title}</h1>
+              {moviedet.backdrop_path === null ? <img src={noimage} className='img-fluid rounded' /> : <img src={"https://image.tmdb.org/t/p/original/" + moviedet.backdrop_path} className='img-fluid rounded' />}
+            </div>
+   
+            {/* overview */}
+            <h2 className='text-black text-center pt-5 px-3 md:px-60 font-Roboto text-[18px]'>{moviedet.overview}</h2>
+
 
       {/* overview */}
       <h2 className="text-black text-center pt-5 px-3 md:px-60 font-Roboto text-[18px]">
