@@ -20,6 +20,15 @@ function PopularMovies(props) {
     getMovie();
   }, []);
 
+  const [favouriteMovies, setFavouriteMovies] = useState([]);
+
+  const handleFavouriteMoviesClick = movie => {
+    const newFavouriteMovies = [...favouriteMovies, movie]
+    setFavouriteMovies(newFavouriteMovies)
+  };
+
+  console.log(favouriteMovies);
+
   return (
     <div className="container-fluid movie-app">
       <div>
@@ -37,7 +46,7 @@ function PopularMovies(props) {
             </a>
             <h3 className="CardTitle">{movie.title}</h3>
             <h5>{movie.release_date}</h5>
-            <div className="overlay" onClick={() => props.handleFavouriteMoviesClick(movie)}>
+            <div className="overlay" onClick={() => handleFavouriteMoviesClick(movie)}>
             <AddToFavourites />
             </div>
           </div>

@@ -10,11 +10,6 @@ import AddToFavourites from './AddToFavourites/AddToFavourites';
 import MovieDetails from './Movie/MovieDetails';
 
 const App = () => {
-  const [favouriteMovies, setFavouriteMovies] = useState([]);
-
-  const addFavouriteMovies = movie => {
-    setFavouriteMovies([...favouriteMovies, movie])
-  };
 
   return (
     <>
@@ -24,7 +19,7 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<PopularMovie />} />
-          <Route path="/popularmovies" element={<PopularMovie handleFavouriteMoviesClick={addFavouriteMovies} />} /> 
+          <Route path="/popularmovies" element={<PopularMovie  />} /> 
           <Route
             path="/moviedetail/:id"
             element={<MovieDetails />}
