@@ -11,7 +11,11 @@ import MovieDetails from './Movie/MovieDetails';
 
 const App = () => {
   const [favouriteMovies, setFavouriteMovies] = useState([]);
-  
+
+  const handleAddFavouriteMovies = movie => {
+    setFavouriteMovies([...favouriteMovies, movie])
+  };
+
   return (
     <>
       <Router>
