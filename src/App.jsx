@@ -10,6 +10,8 @@ import AddToFavourites from './AddToFavourites/AddToFavourites';
 import MovieDetails from './Movie/MovieDetails';
 
 const App = () => {
+  const [favouriteMovies, setFavouriteMovies] = useState([]);
+  
   return (
     <>
       <Router>
