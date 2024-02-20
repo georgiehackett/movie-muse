@@ -36,8 +36,8 @@ function PopularMovies(props) {
             </a>
             <h3 className="CardTitle">{movie.title}</h3>
             <h5>{movie.release_date}</h5>
-            <div className="overlay">
-              <AddToFavourites onClick={() => props.handleFavouriteMoviesClick(movie)} />
+            <div className="overlay" onClick={() => props.handleFavouriteMoviesClick(movie)}>
+              <AddToFavourites />
             </div>
           </div>
         ))}
