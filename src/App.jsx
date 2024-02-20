@@ -17,7 +17,7 @@ const App = () => {
 <Router>
        <Navbar/>
        <Hero />
-  
+       
   <Routes>
       <Route path="/" element={<PopularMovie />} />
       <Route path="/popularmovies" element={<PopularMovie />} /> 
@@ -26,7 +26,9 @@ const App = () => {
       <Route path='/upcoming' element={<Upcoming />} />
       <Route path='/nowplaying' element={<NowPlaying />} />
     </Routes> 
-      
+    <TopRated />
+    <Upcoming />
+    <NowPlaying />
       <Footer />
  </Router>
     </>
