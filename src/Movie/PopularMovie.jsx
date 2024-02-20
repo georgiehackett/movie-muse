@@ -27,7 +27,8 @@ function PopularMovies(props) {
     setFavouriteMovies(newFavouriteMovies)
   };
 
-  console.log(favouriteMovies);
+
+//   console.log(favouriteMovies);
 
   return (
     <div className="container-fluid movie-app">
