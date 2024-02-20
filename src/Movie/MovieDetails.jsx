@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { HiChevronLeft } from 'react-icons/hi';
+// import { HiChevronLeft } from 'react-icons/hi';
 import noimage from '../assets/images/no-image.jpg';
-import { FaPlay } from 'react-icons/fa';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+// import { FaPlay } from 'react-icons/fa';
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import slugify from 'react-slugify';
+// import slugify from 'react-slugify';
 import { Container, Row, Col } from 'reactstrap';
+import AddToFavourites from '../AddToFavourites/AddToFavourites';
 
 const API_KEY = '131c856f75867823ef322849c2612110';
 
@@ -28,7 +29,7 @@ const MovieDetails = () => {
     //console.log(moviedetail);
     setMoviegenres(moviedetail.genres);
 
-    const AddToFavourites = props.addToFavouritesIcon;
+    // const AddToFavourites = props.addToFavouritesIcon;
   };
 
   const fetchCast = async () => {
@@ -54,8 +55,6 @@ const MovieDetails = () => {
     fetchCast();
     fetchVideo();
   }, []);
-
-  const AddToFavourites = props.AddToFavourites;
 
   return (
     <>
@@ -122,9 +121,6 @@ const MovieDetails = () => {
                         />
                         <p className="text-black">{cast.name}</p>
                         <p className="text-primary">({cast.character})</p>
-                      </div>
-                      <div className='overlay'>
-                        <AddToFavourites />
                       </div>
                     </>
                   ) : null}
