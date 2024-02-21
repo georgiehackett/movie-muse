@@ -18,6 +18,7 @@ import NowPlaying from './Components/Movie/NowPlaying'
 import Hero from './Components/Hero/Hero';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
+import FavouritesPage from './Pages/FavouritesPage';
 
 
 const App = () => {
@@ -27,7 +28,8 @@ const App = () => {
       <Navbar />
       <Hero />
 
-      <Routes>
+      <FavouritesPage />
+      {/* <Routes>
         <Route path="/" element={<PopularMovie />} />
         <Route path="/popularmovies" element={<PopularMovie />} />
         <Route path="/moviedetail/" element={<MovieDetails />} />
@@ -37,7 +39,7 @@ const App = () => {
       </Routes>
       {location.pathname === '/TopRated' ? '' : <TopRated />}
       {location.pathname === '/Upcoming' ? '' : <Upcoming />}
-      {location.pathname === '/NowPlaying' ? '' : <NowPlaying />}
+      {location.pathname === '/NowPlaying' ? '' : <NowPlaying />} */}
       <Footer />
     </>
   );
