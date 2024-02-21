@@ -4,7 +4,7 @@ import MovieCard from "./MovieCard";
 
 const Toprated_url = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=${API_KEY}`;
 
-function TopRated() {
+function TopRated({ favouriteMovies, setFavouriteMovies }) {
     const [movieList,setMovieList] = useState([])
     const getMovie = ()=>{
 
@@ -22,7 +22,7 @@ function TopRated() {
             <h1>Top Rated Movies</h1>
             </div>
            
-            <MovieCard movieList={movieList}/>
+            <MovieCard movieList={movieList} favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies}/>
     
     </div>
     )
