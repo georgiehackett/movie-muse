@@ -3,12 +3,6 @@
 	flex-wrap: nowrap;
 }
 
-/* Override Bootstrap's default styles */
-/* .row > * {
-  width: auto; /* Set width to auto 
-} */
-
-
 .image-container {
 	position: relative;
 	transition: transform 0.2s;
