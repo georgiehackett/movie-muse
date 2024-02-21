@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { useParams,Link, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import noimage from '../assets/images/no-image.jpg';
-// import { FaPlay } from 'react-icons/fa';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-// import slugify from 'react-slugify';
 import { Container, Row, Col } from 'reactstrap';
-import AddToFavourites from '../AddToFavourites/AddToFavourites';
+//import AddToFavourites from '../AddToFavourites/AddToFavourites';
 
 const API_KEY = '131c856f75867823ef322849c2612110';
 
 const MovieDetails = () => {
-  //const { id } = useParams();
+ 
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const id = params.get("q");
@@ -66,10 +64,14 @@ const MovieDetails = () => {
 
             {/* poster */}
             {/* <h1 className='text-black text-center'>{moviedet.title}</h1> */}
-            <div className='relative h-auto md:h-[82vh] flex justify-center'>
+            <div className='rounded float-start'>
              {/*  <div className='h-full w-full shadowbackdrop absolute'></div> */}
               <h1 className='text-black text-center'>{moviedet.title}</h1>
-              {moviedet.backdrop_path === null ? <img src={noimage} className='img-fluid rounded' /> : <img src={"https://image.tmdb.org/t/p/original/" + moviedet.backdrop_path} className='img-fluid rounded' />}
+              
+              <img
+             src={moviedet.backdrop_path ? `https://image.tmdb.org/t/p/w400/${moviedet.backdrop_path}` : ''}
+             alt="movie poster"
+             />
             </div>
    
             {/* overview */}
@@ -114,7 +116,7 @@ const MovieDetails = () => {
                       <div className="flex items-center text-center flex-col mx-1">
                         <LazyLoadImage
                           effect="blur"
-                          src={
+                          src={ 
                             'https://image.tmdb.org/t/p/w200' +
                             cast.profile_path
                           }
