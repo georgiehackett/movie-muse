@@ -38,7 +38,7 @@ function PopularMovies(props) {
     // favouriteMovies.includes(movie) ? console.log('yay') : console.log('nay');
   
 
-  //   console.log(favouriteMovies);
+    console.log(favouriteMovies);
 
   return (
     <div className="container-fluid movie-app">
@@ -57,23 +57,21 @@ function PopularMovies(props) {
             </a>
             <h3 className="CardTitle">{movie.title}</h3>
             <h5>{movie.release_date}</h5>
-            <div
-              className="overlay"
-              onClick={() => handleFavouriteMoviesClick(movie)}
-            >
               {favouriteMovies.includes(movie) ? (
+                <div
+                className="overlay"
+                onClick={() => handleRemoveFavouriteMoviesClick(movie)}
+              >
                 <RemoveFromFavourites />
+                </div>
               ) : (
+                <div
+                className="overlay"
+                onClick={() => handleFavouriteMoviesClick(movie)}
+              >
                 <AddToFavourites />
+                </div>
               )}
-              {/* <AddToFavourites /> */}
-            </div>
-            {/* <div
-              className="overlay"
-              onClick={() => handleRemoveFavouriteMoviesClick(movie)}
-            >
-              <RemoveFromFavourites />
-            </div> */}
           </div>
         ))}
       </div>
