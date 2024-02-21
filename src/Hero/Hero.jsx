@@ -50,7 +50,6 @@ useEffect(()=>{
           onChange={onChange}
         />
       </div>
- fix-duplication-issues
       {results.length >0 && (
       <MovieCard movieList={results}/>
       )
