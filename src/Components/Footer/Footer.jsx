@@ -8,7 +8,7 @@ function Footer() {
         <nav className="navbar navbar-expand-lg bg-body-tertiary"></nav>
         <div className="Footer">
             <div className="container">
-            <a class="navbar-brand" href="#">
+            <a className="navbar-brand" href="#">
             <img src={Logo} width="250" height="100" />
             </a>
             <div className="row">    

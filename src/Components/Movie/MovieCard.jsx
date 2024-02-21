@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AddToFavourites from '../AddToFavourites/AddToFavourites';
+import RemoveFromFavourites from '../RemoveFromFavourites/RemoveFromFavourites';
 const Image_url = 'https://image.tmdb.org/t/p/w200/';
 
 const MovieCard = ({ movieList }) => {
