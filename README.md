@@ -1,17 +1,6 @@
 # MovieMuse
 
-
-
-![Github license](https://img.shields.io/badge/license-MIT-blue.svg)
-
-
-<!-- Developer Signature and github details -->
-<br />
-<div align="center">
-  <a href="https://github.com/addy306/prof-README-generator">
-    <img src="images/AS-logo.png" alt="Logo" width="80" height="80">
-  </a>
-  </div>
+Have you ever found yourself scrolling endlessly trying to find the right movie? Settling on the first movie you see after searching for the last 30mins? *cough* You could’ve watched an episode of The Office while deciding. With Movie Muse you’ll be able to instantly search our movies database and filter the results based on categories, popularity and trending. Using our secret algorithm, you search for a movie through a category and you can reroll up to 5 times. What happens after 5? Time to pick your movie, sit back, play and enjoy cinematic brilliance. Movie choices, made simple. <br />
 
 ## Deployed page URL
 Link: -Insert link here-
@@ -37,15 +26,15 @@ It can also provide the user with information including:
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Contribution](#contribution)
+- [Contributing](#contributing)
 - [Tests](#tests)
+- [Using](#Using)
 - [Questions](#questions)
 
-<!-- Add installation instructions here -->
 ## Installation 
-Follow these steps to set up and run the project locally:
+### Running the project locally:
 
-- Please clone the repository using either SSH or HTTPS
+- Please clone the repository using either SSH or HTTPS so that you are able to run 
 
 Ensure that you have the following installed on your machine prior to running the application:
 - [Node.js](https://nodejs.org/) installed on your machine.
@@ -54,8 +43,16 @@ Ensure that you have the following installed on your machine prior to running th
 Then:
 - $npm i
 - $npm run dev
+
+### Accessing deployed application:
+- Please access the app using the deployed link: https://main--movie-muse.netlify.app/
 ## Usage 
-Simply click on deployed url and enter your desired city in the input 
+1)  User desires to find a movie to watch. <br />
+2)  User will access Movie Muse and is able to either: <br /> <br />
+      - Scroll through the web application to pick from the most popular and/or top rated movies <br />
+        OR <br />
+      - Use the search bar to look for a specific movie<br /><br />
+  3)  Then, the user will be able to click on the movie they have selected and view more information about it, whilst also being able to press the 'Favourite' button to save the movie, where they are then able to retrive it again.
 
 
 ## Webpage Features
@@ -71,28 +68,34 @@ Simply click on deployed url and enter your desired city in the input
 
 
 ## License
+![Github license](https://img.shields.io/badge/license-MIT-blue.svg) <br />
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-<!-- Add contributing guidelines here -->
 ## Contributing
 
 https://github.com/georgiehackett <br />
 https://github.com/addy306 <br />
 https://github.com/vlee109 <br />
-https://github.com/abdeeg 
+https://github.com/abdeeg <br />
+https://github.com/angelikawidz
 
-<!-- Add information about how to run tests here -->
+
 ## Tests 
 Test using $npm run dev
 
-## Built With
+## Using:
 * Javascript
 * HTML 
 * CSS
 * Boostrap
 * TMBD API
 * React
+* Vite
+* Netlify
+* Figma
+* Miro
+* Kanban
 
 
 ## Questions
-If you have any questions, feel free to reach out.
+If you have any questions, feel free to reach out via GitHub
