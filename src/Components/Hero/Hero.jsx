@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Hero.css';
 import MovieCard from '../Movie/MovieCard';
+import Logo from '../assets/images/logo-recolour.png';
 
 
 
@@ -38,10 +39,10 @@ useEffect(()=>{
   return (
     <div className="jumbotron">
       {/* <h1 className="display-4">Welcome to Movie Muse</h1> */}
-      <img src="../assets/images/logo.png" alt="logo" />
+      <img src={Logo} alt="logo" id='logo' />
       <p className="lead">Find your favourite movies here!</p>
       <hr className="my-4" />
-      <div className="input-group mb-3">
+      <div className="input-group mb-3 d-flex justify-content-center">
         <input
           type="text"
           className="form-control"
