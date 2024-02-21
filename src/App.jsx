@@ -6,7 +6,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 import './App.css';
-import Hero from './Hero/Hero';
+import Hero from './Components/Hero/Hero';
 import Footer from './footer/footer';
 import PopularMovie from './Movie/PopularMovie';
 import TopRated from './Movie/TopRated';
