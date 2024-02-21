@@ -29,17 +29,18 @@ const App = () => {
       <Hero />
 
       <FavouritesPage />
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<PopularMovie />} />
         <Route path="/popularmovies" element={<PopularMovie />} />
         <Route path="/moviedetail/" element={<MovieDetails />} />
         <Route path="/toprated" element={<TopRated />} />
         <Route path="/upcoming" element={<Upcoming />} />
         <Route path="/nowplaying" element={<NowPlaying />} />
+        <Route path='/favourites' element={<FavouritesPage />} />
       </Routes>
       {location.pathname === '/TopRated' ? '' : <TopRated />}
       {location.pathname === '/Upcoming' ? '' : <Upcoming />}
-      {location.pathname === '/NowPlaying' ? '' : <NowPlaying />} */}
+      {location.pathname === '/NowPlaying' ? '' : <NowPlaying />}
       <Footer />
     </>
   );

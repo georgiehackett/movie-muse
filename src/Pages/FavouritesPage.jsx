@@ -1,18 +1,17 @@
-import React from 'react'
+import React from 'react';
 import MovieCard from '../Components/Movie/MovieCard';
 
+function FavouritesPage({ favouriteMovies }) {
+  console.log(favouriteMovies);
 
-function FavouritesPage() {
   return (
-    <div className='container-fluid movie-app'>
-    <div>
+    <div className="container-fluid movie-app">
+      <div>
         <h1>Favourites</h1>
-        </div>
-       
-        
-
-</div>
-  )
+      </div>
+      {/* <MovieCard /> */}
+    </div>
+  );
 }
 
 export default FavouritesPage;
