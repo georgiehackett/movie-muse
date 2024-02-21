@@ -11,7 +11,7 @@ import Footer from './Components/Footer/Footer';
 import PopularMovie from './Movie/PopularMovie';
 import TopRated from './Movie/TopRated';
 import NowPlaying from './Movie/NowPlaying';
-import Navbar from './navbar/navbar';
+import Navbar from './Components/Navbar/Navbar';
 import MovieDetails from './Movie/MovieDetails';
 import Upcoming from './Movie/Upcoming';
 
