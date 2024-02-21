@@ -11,7 +11,6 @@ import './App.css';
 import TopRated from './Components/Movie/TopRated';
 import PopularMovie from './Components/Movie/PopularMovie';
 import MovieDetails from './Components/Movie/MovieDetails';
-// import MovieCard from './Components/Movie/MovieCard';
 import Upcoming from './Components/Movie/Upcoming';
 import NowPlaying from './Components/Movie/NowPlaying'
 
@@ -29,7 +28,8 @@ const App = () => {
       <Hero />
 
       <FavouritesPage />
-      <Routes>
+      <PopularMovie />
+      {/* <Routes>
         <Route path="/" element={<PopularMovie />} />
         <Route path="/popularmovies" element={<PopularMovie />} />
         <Route path="/moviedetail/" element={<MovieDetails />} />
@@ -40,7 +40,7 @@ const App = () => {
       </Routes>
       {location.pathname === '/TopRated' ? '' : <TopRated />}
       {location.pathname === '/Upcoming' ? '' : <Upcoming />}
-      {location.pathname === '/NowPlaying' ? '' : <NowPlaying />}
+      {location.pathname === '/NowPlaying' ? '' : <NowPlaying />} */}
       <Footer />
     </>
   );
