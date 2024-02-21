@@ -38,7 +38,7 @@ useEffect(()=>{
   return (
     <div className="jumbotron">
       {/* <h1 className="display-4">Welcome to Movie Muse</h1> */}
-      <img src="src/images/logo.png" alt="logo" />
+      <img src="../assets/images/logo.png" alt="logo" />
       <p className="lead">Find your favourite movies here!</p>
       <hr className="my-4" />
       <div className="input-group mb-3">

@@ -1,6 +1,6 @@
 import React from 'react';
-import './footer.css';
-import Logo from '../assets/images/project2logoupdated.gif'
+import './Footer.css';
+import Logo from '../assets/images/project2logoupdated.gif';
 
 function Footer() {
     return (
@@ -8,7 +8,7 @@ function Footer() {
         <nav className="navbar navbar-expand-lg bg-body-tertiary"></nav>
         <div className="Footer">
             <div className="container">
-            <a class="navbar-brand" href="#">
+            <a className="navbar-brand" href="#">
             <img src={Logo} width="250" height="100" />
             </a>
             <div className="row">    
