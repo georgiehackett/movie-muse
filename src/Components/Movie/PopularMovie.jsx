@@ -9,13 +9,14 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import AddToFavourites from '../AddToFavourites/AddToFavourites';
 import RemoveFromFavourites from '../RemoveFromFavourites/RemoveFromFavourites';
 
-function PopularMovies(props) {
+function PopularMovies({ favouriteMovies, setFavouriteMovies }) {
   const [movieList, setMovieList] = useState([]);
 
   const getMovie = () => {
     fetch(`${Popular_url}`)
       .then(res => res.json())
-      .then(json => setMovieList(json.results));
+      .then(json => {console.log(json.results);
+         setMovieList(json.results)});
   };
   useEffect(() => {
     getMovie();
@@ -26,7 +27,7 @@ function PopularMovies(props) {
       <div>
         <h1>Popular Movies</h1>
       </div>
-      <MovieCard movieList={movieList} />
+      <MovieCard movieList={movieList} favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />
     </div>
   );
 }

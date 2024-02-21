@@ -5,7 +5,7 @@ const API_KEY="131c856f75867823ef322849c2612110";
 const Image_url = "https://image.tmdb.org/t/p/w200/";
 const Upcoming_url = `https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1&api_key=${API_KEY}`;
 //const Search_url= `https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&api_key=${process.env.API_KEY}&query=`
-function Upcoming() {
+function Upcoming({ favouriteMovies, setFavouriteMovies }) {
     const [movieList,setMovieList] = useState([])
     const getMovie = ()=>{
 
@@ -23,7 +23,7 @@ function Upcoming() {
             <h1>Upcoming Movies</h1>
             </div>
            
-    <MovieCard movieList={movieList}/>
+    <MovieCard movieList={movieList} favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies}/>
     
     </div>
     )
