@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import noimage from '../assets/images/no-image.jpg';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -10,10 +10,9 @@ import { Container, Row, Col } from 'reactstrap';
 const API_KEY = '131c856f75867823ef322849c2612110';
 
 const MovieDetails = () => {
- 
   const location = useLocation();
   const params = new URLSearchParams(location.search);
-  const id = params.get("q");
+  const id = params.get('q');
   console.log(id);
   //const url = `https://api.themoviedb.org/3/find/${id}?external_source=`
 
@@ -60,48 +59,53 @@ const MovieDetails = () => {
 
   return (
     <>
-        <Link to="/" className='fixed z-10 text-4xl text-black bg-white m-3 md:m-5 rounded-full'><HiChevronLeft />Home<HiChevronRight /></Link>
+      <Link
+        to="/"
+        className="fixed z-10 text-4xl text-black bg-white m-3 md:m-5 rounded-full"
+      >
+        <HiChevronLeft />
+        Home
+        <HiChevronRight />
+      </Link>
 
-            {/* poster */}
-            {/* <h1 className='text-black text-center'>{moviedet.title}</h1> */}
-            <div className='rounded float-start'>
-             {/*  <div className='h-full w-full shadowbackdrop absolute'></div> */}
-              <h1 className='text-black text-center'>{moviedet.title}</h1>
-              
-              <img
-             src={moviedet.backdrop_path ? `https://image.tmdb.org/t/p/w400/${moviedet.backdrop_path}` : ''}
-             alt="movie poster"
-             />
-            </div>
-   
-            {/* overview */}
-            <h2 className='text-black text-center pt-5 px-3 md:px-60 font-Roboto text-[18px]'>{moviedet.overview}</h2>
+      {/* poster, overview, release, genre card*/}
 
-
-      {/* overview */}
-      <h2 className="text-black text-center pt-5 px-3 md:px-60 font-Roboto text-[18px]">
-        {moviedet.overview}
-      </h2>
-
-      <div className="text-primary font-semibold my-3 flex justify-center">
-        <h2 className="bg-blue-600/30 border-2 border-blue-700 py-2 px-3 rounded-full">
-          Release Date : {moviedet.release_date}
-        </h2>
-      </div>
-
-      {/* tag */}
-      <h3>Genres</h3>
+      <div className="card mb-3 movie-overview">
+        <div className="row g-0">
+          <div className="col-md-4">
+            <img
+              src={
+                moviedet.backdrop_path
+                  ? `https://image.tmdb.org/t/p/w400/${moviedet.backdrop_path}`
+                  : ''
+              }
+              alt="movie poster"
+              className="px-3"
+            />
+          </div>
+          <div className="col-md-8">
+            <div className="card-body">
+              <h5 className="card-title">{moviedet.title}</h5>
+              <p className="card-text">{moviedet.overview}</p>
+              <h5 className=" text-center text-primary ">
+                Release Date : {moviedet.release_date}
+              </h5>
+              <h3>Genres</h3>
       <Container>
         <Row>
           {moviegenres.map(tag => (
-            <Col key={tag.id} xs="3">
-              <div className="text-black d-flex badge bg-primary rounded-pill text-center ">
+            <Col key={tag.id} xs="3" className='p-2'>
+              <div className="text-black d-flex badge bg-primary rounded-pill text-center">
                 {tag.name}
               </div>
             </Col>
           ))}
         </Row>
       </Container>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* cast */}
       <div className="flex flex-col items-center">
@@ -116,7 +120,7 @@ const MovieDetails = () => {
                       <div className="flex items-center text-center flex-col mx-1">
                         <LazyLoadImage
                           effect="blur"
-                          src={ 
+                          src={
                             'https://image.tmdb.org/t/p/w200' +
                             cast.profile_path
                           }
