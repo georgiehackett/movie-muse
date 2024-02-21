@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import Hero from './Components/Hero/Hero';
-import Footer from './footer/footer';
+import Footer from './Components/Footer/Footer';
 import PopularMovie from './Movie/PopularMovie';
 import TopRated from './Movie/TopRated';
 import NowPlaying from './Movie/NowPlaying';
