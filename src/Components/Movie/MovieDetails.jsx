@@ -12,7 +12,7 @@ const MovieDetails = () => {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const id = params.get('q');
-  console.log(id);
+  
   
 
   const [moviedet, setMoviedet] = useState([]);

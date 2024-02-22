@@ -9,6 +9,9 @@ const JumbotronSearch = ({ favouriteMovies, setFavouriteMovies }) => {
   const [query, setQuery] = useState('');
   const [results, setResult] = useState([]);
 
+  const [searched, setSearched] = useState(false); // State to track if a search has been performed
+
+
   const onChange = e => {
     e.preventDefault();
     const Search_url = `https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&api_key=${API_KEY}&query=${e.target.value}`;
@@ -19,11 +22,19 @@ const JumbotronSearch = ({ favouriteMovies, setFavouriteMovies }) => {
       .then(data => {
         if (!data.errors) {
           setResult(data.results);
+
+          setSearched(true); // Set searched to true when search results are obtained
         }
       });
   };
 
-  const handleSearchScroll = () => results.current.scrollIntoView();
+  const clearSearch = () => {
+    setQuery('');
+    setResult([]);
+    setSearched(false); // Reset searched state when clearing the search
+  };
+  const handleSearchScroll = () => results.current.scrollIntoView() 
+  
 
   return (
     <>
@@ -46,6 +57,11 @@ const JumbotronSearch = ({ favouriteMovies, setFavouriteMovies }) => {
           >
             Search
           </button>
+          {searched && ( // Conditionally render the "Clear Search" button if search has been performed
+            <button className='ms-3 btn btn-light rounded' type="button" onClick={clearSearch}>
+              Clear Search
+            </button>
+          )}
         </div>
       </div>
       <div id="results" ref={results}>

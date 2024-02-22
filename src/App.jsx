@@ -13,15 +13,16 @@ import PopularMovie from './Components/Movie/PopularMovie';
 import MovieDetails from './Components/Movie/MovieDetails';
 import Upcoming from './Components/Movie/Upcoming';
 import NowPlaying from './Components/Movie/NowPlaying';
-
 import Hero from './Components/Hero/Hero';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
 import FavouritesPage from './Pages/FavouritesPage';
-import PopularMovies from './Components/Movie/PopularMovie';
+import AllMovies from './Components/Movie/AllMovies';
+
 
 const App = () => {
   const location = useLocation();
+  
 
   const [favouriteMovies, setFavouriteMovies] = useState([{id: '', poster_path: '', title: ''}]);
 
@@ -33,8 +34,8 @@ const App = () => {
       <Hero favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />
 
       <Routes>
-        <Route path="/" element={<PopularMovie favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />} />
-        <Route path="/popularmovies" element={<PopularMovie favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />} />
+        <Route path="/" element={<AllMovies favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />} />
+        <Route path="/popularmovie" element={<PopularMovie favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />} />
         <Route path="/moviedetail/" element={<MovieDetails />} />
         <Route
           path="/toprated"
@@ -53,6 +54,14 @@ const App = () => {
           element={<FavouritesPage favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />}
         />
       </Routes>
+      {/* The lines of code below are to avoid row duplicate rendered on the App page */}
+      
+      {location.pathname === '/' ? (
+       
+        ''
+      ) : (
+        <AllMovies favouriteMovies={favouriteMovies}setFavouriteMovies={setFavouriteMovies} />
+      )}
       {location.pathname === '/PopularMovie' ? (
         ''
       ) : (
