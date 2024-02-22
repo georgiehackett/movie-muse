@@ -5,10 +5,12 @@ import Logo from '../assets/images/logo-recolour.png';
 
 const API_KEY = '131c856f75867823ef322849c2612110';
 
-const JumbotronSearch = () => {
+const JumbotronSearch = ({ favouriteMovies, setFavouriteMovies }) => {
   const [query, setQuery] = useState('');
   const [results, setResult] = useState([]);
+
   const [searched, setSearched] = useState(false); // State to track if a search has been performed
+
 
   const onChange = e => {
     e.preventDefault();
@@ -20,6 +22,7 @@ const JumbotronSearch = () => {
       .then(data => {
         if (!data.errors) {
           setResult(data.results);
+
           setSearched(true); // Set searched to true when search results are obtained
         }
       });
@@ -32,10 +35,11 @@ const JumbotronSearch = () => {
   };
   const handleSearchScroll = () => results.current.scrollIntoView() 
   
+
   return (
     <>
-      <div className="jumbotron">
-        <img src={Logo} alt="logo" id="logo" />
+      <div className="jumbotron mb-2">
+        <img className="img-fluid" src={Logo} alt="logo" id="logo" />
         <p className="lead">Find your favourite movies here!</p>
         <hr className="my-4" />
         <div className="input-group mb-10 d-flex justify-content-center">
@@ -46,7 +50,11 @@ const JumbotronSearch = () => {
             value={query}
             onChange={onChange}
           />
-          <button className='ms-3 btn btn-light rounded' type="button" onClick={handleSearchScroll}>
+          <button
+            className="ms-3 btn btn-light rounded"
+            type="button"
+            onClick={handleSearchScroll}
+          >
             Search
           </button>
           {searched && ( // Conditionally render the "Clear Search" button if search has been performed
@@ -56,8 +64,8 @@ const JumbotronSearch = () => {
           )}
         </div>
       </div>
-      <div id='results' ref={results}>
-      {results.length > 0 && <MovieCard movieList={results} />}
+      <div id="results" ref={results}>
+        {results.length > 0 && <MovieCard movieList={results} favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />}
       </div>
     </>
   );

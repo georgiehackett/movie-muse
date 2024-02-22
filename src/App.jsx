@@ -31,7 +31,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Hero />
+      <Hero favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />
 
       <Routes>
         <Route path="/" element={<AllMovies favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />} />
