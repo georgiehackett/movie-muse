@@ -24,6 +24,9 @@ const JumbotronSearch = () => {
         }
       });
   };
+
+  const handleSearchScroll = () => results.current.scrollIntoView() 
+  
   /*  const getMovie = ()=>{
 
     fetch(`${Search_url}`)
@@ -39,17 +42,22 @@ useEffect(()=>{
         <img src={Logo} alt="logo" id="logo" />
         <p className="lead">Find your favourite movies here!</p>
         <hr className="my-4" />
-        <div className="input-group mb-3 d-flex justify-content-center">
+        <div className="input-group mb-10 d-flex justify-content-center">
           <input
             type="text"
-            className="form-control"
+            className="form-control rounded"
             placeholder="Search for movies..."
             value={query}
             onChange={onChange}
           />
+          <button className='ms-3 btn btn-light rounded' type="button" onClick={handleSearchScroll}>
+            Search
+          </button>
         </div>
       </div>
+      <div id='results' ref={results}>
       {results.length > 0 && <MovieCard movieList={results} />}
+      </div>
     </>
   );
 };
