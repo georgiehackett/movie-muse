@@ -15,8 +15,9 @@ function PopularMovies({ favouriteMovies, setFavouriteMovies }) {
   const getMovie = () => {
     fetch(`${Popular_url}`)
       .then(res => res.json())
-      .then(json => {console.log(json.results);
-         setMovieList(json.results)});
+      .then(json => {
+        setMovieList(json.results);
+      });
   };
   useEffect(() => {
     getMovie();
@@ -25,9 +26,13 @@ function PopularMovies({ favouriteMovies, setFavouriteMovies }) {
   return (
     <div className="container-fluid movie-app mt-2">
       <div>
-        <h1 className='mt-5 ms-3 mb-4'>Popular Movies</h1>
+        <h1 className="mt-5 ms-3 mb-4">Popular Movies</h1>
       </div>
-      <MovieCard movieList={movieList} favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />
+      <MovieCard
+        movieList={movieList}
+        favouriteMovies={favouriteMovies}
+        setFavouriteMovies={setFavouriteMovies}
+      />
     </div>
   );
 }

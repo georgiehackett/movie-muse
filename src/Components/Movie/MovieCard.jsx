@@ -6,7 +6,7 @@ const Image_url = 'https://image.tmdb.org/t/p/w200/';
 
 const MovieCard = ({ movieList, favouriteMovies, setFavouriteMovies }) => {
   // const [favouriteMovies, setFavouriteMovies] = useState([]);
-  console.log(favouriteMovies, Boolean(favouriteMovies));
+  // console.log(favouriteMovies, Boolean(favouriteMovies));
 
   const handleFavouriteMoviesClick = movie => {
     const newFavouriteMovies = [...favouriteMovies, movie];
@@ -19,6 +19,10 @@ const MovieCard = ({ movieList, favouriteMovies, setFavouriteMovies }) => {
     );
     setFavouriteMovies(newFavouriteMovies);
   };
+
+  useEffect(() => {
+    localStorage.setItem("favouriteMovies", JSON.stringify(favouriteMovies));
+  }, [favouriteMovies]);
 
   return (
     <div className="row popular-card">
