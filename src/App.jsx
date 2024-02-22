@@ -13,12 +13,11 @@ import PopularMovie from './Components/Movie/PopularMovie';
 import MovieDetails from './Components/Movie/MovieDetails';
 import Upcoming from './Components/Movie/Upcoming';
 import NowPlaying from './Components/Movie/NowPlaying';
-
 import Hero from './Components/Hero/Hero';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
 import FavouritesPage from './Pages/FavouritesPage';
-import PopularMovies from './Components/Movie/PopularMovie';
+
 
 const App = () => {
   const location = useLocation();
@@ -34,7 +33,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<PopularMovie favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />} />
-        <Route path="/popularmovies" element={<PopularMovie favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />} />
+        <Route path="/popularmovie" element={<PopularMovie favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />} />
         <Route path="/moviedetail/" element={<MovieDetails />} />
         <Route
           path="/toprated"
