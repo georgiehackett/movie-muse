@@ -30,7 +30,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Hero />
+      <Hero favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />
 
       <Routes>
         <Route path="/" element={<PopularMovie favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />} />

@@ -60,7 +60,7 @@ const MovieDetails = () => {
     <>
       <Link
         to="/"
-        className="fixed z-10 text-4xl text-black bg-white m-3 md:m-5 rounded-full"
+        className="fixed z-10 text-4xl text-black bg-white m-3  md:m-5 rounded-full"
       >
         <HiChevronLeft />
         Home
@@ -69,7 +69,7 @@ const MovieDetails = () => {
 
       {/* poster, overview, release, genre card*/}
 
-      <div className="card mb-3 movie-overview">
+      <div className="card mb-3 mt-2 movie-overview">
         <div className="row g-0">
           <div className="col-md-4">
             <img
