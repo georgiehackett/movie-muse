@@ -6,9 +6,9 @@ function FavouritesPage({ favouriteMovies, setFavouriteMovies }) {
 
 
   return (
-    <div className="container-fluid movie-app">
+    <div className="container-fluid movie-app mt-2">
       <div>
-        <h1>Favourites</h1>
+        <h1 className='mt-5 ms-3 mb-4'>Favourites</h1>
       </div>
       <MovieCard movieList={favouriteMovies} favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />
     </div>
