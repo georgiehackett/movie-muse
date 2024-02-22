@@ -24,9 +24,9 @@ function PopularMovies({ favouriteMovies, setFavouriteMovies }) {
   }, []);
 
   return (
-    <div className="container-fluid movie-app mt-2">
+    <div className="container-fluid roundede movie-app mt-2">
       <div>
-        <h1 className="mt-5 ms-3 mb-4">Popular Movies</h1>
+        <h1 className="mt-5 ms-3 mb-4 p-2">Popular Movies</h1>
       </div>
       <MovieCard
         movieList={movieList}

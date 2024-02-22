@@ -1,6 +1,4 @@
 .jumbotron {
-  /* background: url('tumblr_n19f0274mT1s8gf9ko5_500.gif') center/cover no-repeat; */
-  color: #000000;
   padding: 60px 30px;
   border-radius: 10px;
   margin-bottom: 0px;
@@ -10,8 +8,7 @@
   background-size: cover;
   width: 100%;
   background-position: top;
-  color: #191a19;
-  opacity: .95;
+  /* opacity: .95; */
 }
 
 #logo {
@@ -28,7 +25,6 @@
 }
 
 .jumbotron p {
-  opacity: .95;
   margin-top: 50px;
   margin-bottom: 0;
 }
