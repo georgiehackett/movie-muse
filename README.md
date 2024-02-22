@@ -46,7 +46,7 @@ Then:
 
 ### Accessing deployed application:
 - Please access the app using the deployed link: https://main--movie-muse.netlify.app/
-## Usage 
+## Usage <br />
 1)  User desires to find a movie to watch. <br />
 2)  User will access Movie Muse and is able to either: <br /> <br />
       - Scroll through the web application to pick from the most popular and/or top rated movies <br />
