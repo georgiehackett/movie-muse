@@ -1,11 +1,11 @@
 import React,{useEffect, useState} from "react";
 import MovieCard from "./MovieCard";
-import { faV } from "@fortawesome/free-solid-svg-icons";
+
 
 const API_KEY="131c856f75867823ef322849c2612110";
 
 const NowPlaying_url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1&api_key=${API_KEY}`;
-//const Search_url= `https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&api_key=${process.env.API_KEY}&query=`
+
 function NowPlaying({ favouriteMovies, setFavouriteMovies }) {
     const [movieList,setMovieList] = useState([])
     const getMovie = ()=>{

@@ -8,7 +8,7 @@ const API_KEY = '131c856f75867823ef322849c2612110';
 const JumbotronSearch = () => {
   const [query, setQuery] = useState('');
   const [results, setResult] = useState([]);
-  //const [movieList,setMovieList] = useState([])
+  const [searched, setSearched] = useState(false); // State to track if a search has been performed
 
   const onChange = e => {
     e.preventDefault();
@@ -20,22 +20,18 @@ const JumbotronSearch = () => {
       .then(data => {
         if (!data.errors) {
           setResult(data.results);
-          //console.log(data.results);
+          setSearched(true); // Set searched to true when search results are obtained
         }
       });
   };
 
+  const clearSearch = () => {
+    setQuery('');
+    setResult([]);
+    setSearched(false); // Reset searched state when clearing the search
+  };
   const handleSearchScroll = () => results.current.scrollIntoView() 
   
-  /*  const getMovie = ()=>{
-
-    fetch(`${Search_url}`)
-   .then(res => res.json())
-   .then(json => setMovieList(json.results))
-}
-useEffect(()=>{
-    getMovie()
-},[]) */
   return (
     <>
       <div className="jumbotron">
@@ -53,6 +49,11 @@ useEffect(()=>{
           <button className='ms-3 btn btn-light rounded' type="button" onClick={handleSearchScroll}>
             Search
           </button>
+          {searched && ( // Conditionally render the "Clear Search" button if search has been performed
+            <button className='ms-3 btn btn-light rounded' type="button" onClick={clearSearch}>
+              Clear Search
+            </button>
+          )}
         </div>
       </div>
       <div id='results' ref={results}>
