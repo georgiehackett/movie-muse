@@ -17,10 +17,12 @@ import Hero from './Components/Hero/Hero';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
 import FavouritesPage from './Pages/FavouritesPage';
+import AllMovies from './Components/Movie/AllMovies';
 
 
 const App = () => {
   const location = useLocation();
+  console.log(location.pathname);
 
   const [favouriteMovies, setFavouriteMovies] = useState([{id: '', poster_path: '', title: ''}]);
 
@@ -32,7 +34,7 @@ const App = () => {
       <Hero />
 
       <Routes>
-        <Route path="/" element={<PopularMovie favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />} />
+        <Route path="/" element={<AllMovies favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />} />
         <Route path="/popularmovie" element={<PopularMovie favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />} />
         <Route path="/moviedetail/" element={<MovieDetails />} />
         <Route
@@ -52,6 +54,14 @@ const App = () => {
           element={<FavouritesPage favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />}
         />
       </Routes>
+      {/* The lines of code below are to avoid row duplicate rendered on the App page */}
+      
+      {location.pathname === '/' ? (
+       
+        ''
+      ) : (
+        <AllMovies favouriteMovies={favouriteMovies}setFavouriteMovies={setFavouriteMovies} />
+      )}
       {location.pathname === '/PopularMovie' ? (
         ''
       ) : (
