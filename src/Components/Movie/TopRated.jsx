@@ -17,7 +17,7 @@ function TopRated({ favouriteMovies, setFavouriteMovies }) {
     },[])
      
     return(
-        <div className='container-fluid movie-app mt-2'>
+        <div className='container-fluid movie-app mt-5'>
         <div>
             <h1 className='mt-5 ms-3 mb-4'>Top Rated Movies</h1>
             </div>

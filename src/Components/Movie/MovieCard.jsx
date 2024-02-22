@@ -28,7 +28,7 @@ const MovieCard = ({ movieList, favouriteMovies, setFavouriteMovies }) => {
     <div className="row popular-card">
       {movieList.map(movie => (
         <div
-          className="movieCardContainer image-container justify-content-start text-center m-3"
+          className="movieCardContainer image-container justify-content-start text-center m-2"
           key={movie.id}
         >
           <Link to={{ pathname: `/moviedetail`, search: `?q=${movie.id}` }}>
