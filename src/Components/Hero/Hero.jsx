@@ -28,7 +28,7 @@ const JumbotronSearch = ({ favouriteMovies, setFavouriteMovies }) => {
   return (
     <>
       <div className="jumbotron">
-        <img src={Logo} alt="logo" id="logo" />
+        <img className="img-fluid" src={Logo} alt="logo" id="logo" />
         <p className="lead">Find your favourite movies here!</p>
         <hr className="my-4" />
         <div className="input-group mb-10 d-flex justify-content-center">
