@@ -5,7 +5,7 @@ import Logo from '../assets/images/logo-recolour.png';
 
 const API_KEY = '131c856f75867823ef322849c2612110';
 
-const JumbotronSearch = () => {
+const JumbotronSearch = ({ favouriteMovies, setFavouriteMovies }) => {
   const [query, setQuery] = useState('');
   const [results, setResult] = useState([]);
   //const [movieList,setMovieList] = useState([])
@@ -25,8 +25,8 @@ const JumbotronSearch = () => {
       });
   };
 
-  const handleSearchScroll = () => results.current.scrollIntoView() 
-  
+  const handleSearchScroll = () => results.current.scrollIntoView();
+
   /*  const getMovie = ()=>{
 
     fetch(`${Search_url}`)
@@ -50,13 +50,17 @@ useEffect(()=>{
             value={query}
             onChange={onChange}
           />
-          <button className='ms-3 btn btn-light rounded' type="button" onClick={handleSearchScroll}>
+          <button
+            className="ms-3 btn btn-light rounded"
+            type="button"
+            onClick={handleSearchScroll}
+          >
             Search
           </button>
         </div>
       </div>
-      <div id='results' ref={results}>
-      {results.length > 0 && <MovieCard movieList={results} />}
+      <div id="results" ref={results}>
+        {results.length > 0 && <MovieCard movieList={results} favouriteMovies={favouriteMovies} setFavouriteMovies={setFavouriteMovies} />}
       </div>
     </>
   );
