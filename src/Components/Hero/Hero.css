@@ -6,29 +6,19 @@
   margin-bottom: 0px;
   text-align: center;
   background: url('../assets/images/popcorn-background.jpg');
-
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-size: 100vh; */
   width: 100%;
   background-position: top;
   color: #191a19;
   opacity: .95;
-  /* backdrop-filter: blur(10px); */
-  /* filter: blur(5px); */
-  /* background-blend-mode:difference; */
-  
-    
-  /* backgro */
 }
 
 #logo {
   margin-top: 23vh;
-  /* mix-blend-mode:darken; */
   opacity: .95;
   filter: drop-shadow(4px 12px 3px #2e2e2e);
-  /* box-shadow: -4px -3px 45px 21px rgba(0,0,0,0.35); */
-  /* padding: 10px; */
+
 }
 
 .jumbotron h1 {

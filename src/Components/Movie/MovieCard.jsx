@@ -20,9 +20,9 @@ const MovieCard = ({ movieList, favouriteMovies, setFavouriteMovies }) => {
     setFavouriteMovies(newFavouriteMovies);
   };
 
-  useEffect(() => {
-    localStorage.setItem("favouriteMovies", JSON.stringify(favouriteMovies));
-  }, [favouriteMovies]);
+  // useEffect(() => {
+  //   localStorage.setItem("favouriteMovies", JSON.stringify(favouriteMovies));
+  // }, [favouriteMovies]);
 
   return (
     <div className="row popular-card">

@@ -8,7 +8,6 @@ const API_KEY = '131c856f75867823ef322849c2612110';
 const JumbotronSearch = ({ favouriteMovies, setFavouriteMovies }) => {
   const [query, setQuery] = useState('');
   const [results, setResult] = useState([]);
-  //const [movieList,setMovieList] = useState([])
 
   const onChange = e => {
     e.preventDefault();
@@ -20,22 +19,12 @@ const JumbotronSearch = ({ favouriteMovies, setFavouriteMovies }) => {
       .then(data => {
         if (!data.errors) {
           setResult(data.results);
-          //console.log(data.results);
         }
       });
   };
 
   const handleSearchScroll = () => results.current.scrollIntoView();
 
-  /*  const getMovie = ()=>{
-
-    fetch(`${Search_url}`)
-   .then(res => res.json())
-   .then(json => setMovieList(json.results))
-}
-useEffect(()=>{
-    getMovie()
-},[]) */
   return (
     <>
       <div className="jumbotron">
