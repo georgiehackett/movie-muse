@@ -4,7 +4,7 @@ import MovieCard from "./MovieCard";
 
 const API_KEY="131c856f75867823ef322849c2612110";
 
-const NowPlaying_url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1&api_key=${API_KEY}`;
+const NowPlaying_url = `https://api.themoviedb.org/3/movie/now_playing?include_adult=false&language=en-US&page=1&api_key=${API_KEY}`;
 
 function NowPlaying({ favouriteMovies, setFavouriteMovies }) {
     const [movieList,setMovieList] = useState([])

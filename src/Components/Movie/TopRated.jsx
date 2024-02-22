@@ -2,7 +2,7 @@ import React,{useEffect, useState} from "react";
 const API_KEY="131c856f75867823ef322849c2612110";
 import MovieCard from "./MovieCard";
 
-const Toprated_url = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=${API_KEY}`;
+const Toprated_url = `https://api.themoviedb.org/3/movie/top_rated?include_adult=false&language=en-US&page=1&api_key=${API_KEY}`;
 
 function TopRated({ favouriteMovies, setFavouriteMovies }) {
     const [movieList,setMovieList] = useState([])

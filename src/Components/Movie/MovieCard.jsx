@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AddToFavourites from '../AddToFavourites/AddToFavourites';
 import RemoveFromFavourites from '../RemoveFromFavourites/RemoveFromFavourites';
+import MovieDetails from './MovieDetails';
 const Image_url = 'https://image.tmdb.org/t/p/w200/';
 
 const MovieCard = ({ movieList, favouriteMovies, setFavouriteMovies }) => {
@@ -28,6 +29,7 @@ const MovieCard = ({ movieList, favouriteMovies, setFavouriteMovies }) => {
           key={movie.id}
         >
           <Link to={{ pathname: `/moviedetail`, search: `?q=${movie.id}` }}>
+          
             <img src={Image_url + `${movie.poster_path}`} alt={movie.title} />
           </Link>
           <h3 className="CardTitle">{movie.title}</h3>

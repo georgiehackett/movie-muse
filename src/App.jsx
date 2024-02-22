@@ -22,7 +22,7 @@ import AllMovies from './Components/Movie/AllMovies';
 
 const App = () => {
   const location = useLocation();
-  console.log(location.pathname);
+  
 
   const [favouriteMovies, setFavouriteMovies] = useState([{id: '', poster_path: '', title: ''}]);
 

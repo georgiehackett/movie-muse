@@ -1,10 +1,10 @@
 import React,{useEffect, useState} from "react";
-import {Link} from 'react-router-dom';
+
 import MovieCard from "./MovieCard";
 const API_KEY="131c856f75867823ef322849c2612110";
-const Image_url = "https://image.tmdb.org/t/p/w200/";
-const Upcoming_url = `https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1&api_key=${API_KEY}`;
-//const Search_url= `https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&api_key=${process.env.API_KEY}&query=`
+
+const Upcoming_url = `https://api.themoviedb.org/3/movie/upcoming?include_adult=false&language=en-US&page=1&api_key=${API_KEY}`;
+
 function Upcoming({ favouriteMovies, setFavouriteMovies }) {
     const [movieList,setMovieList] = useState([])
     const getMovie = ()=>{
