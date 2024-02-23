@@ -58,14 +58,15 @@ Then:
 ## Webpage Features
 
 ### Screenshot of App Desktop View
-![Desktop view of app landing hero page](../movie-muse/src/Components/assets/images/Moviemuse%20desktop%201.png)
-![Desktop view of app showing all movies](../movie-muse/src/Components/assets/images/Moviemuse%20desktop%202.png)
+##### Desktop view of app landing hero page
+![Desktop view of app landing hero page](./src/Components/assets/images/Moviemuse-desktop-1.png)
 
-### GIF of App been used
-![Scrolling through app to show functions](../movie-muse/src/Components/assets/images/GIF%20Recording%202024-02-22.gif)
 
-### GIF of App responsivness
-![Desktop App being resized to show responsiveness](../movie-muse/src/Components/assets/images/GIF%20Recording%202024-02-22%20Responsivness.gif)
+##### GIF of App been used
+![Scrolling through app to show functions](./src/Components/assets/images/GIF-Recording-2024-02-22.gif)
+
+##### GIF of App responsivness
+![Desktop App being resized to show responsiveness](./src/Components/assets/images/GIF-Recording-2024-02-22-Responsivness.gif)
 
 
 ## License
