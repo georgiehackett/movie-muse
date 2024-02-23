@@ -3,7 +3,7 @@
 Have you ever found yourself scrolling endlessly trying to find the right movie? Settling on the first movie you see after searching for the last 30mins? *cough* You could’ve watched an episode of The Office while deciding. With Movie Muse you’ll be able to instantly search our movies database and filter the results based on categories, popularity and trending. Using our secret algorithm, you search for a movie through a category and you can reroll up to 5 times. What happens after 5? Time to pick your movie, sit back, play and enjoy cinematic brilliance. Movie choices, made simple. <br />
 
 ## Deployed page URL
-Link: -Insert link here-
+[Click Here for Deployed App](https://main--movie-muse.netlify.app/)
 
 
 ## Description
@@ -46,7 +46,7 @@ Then:
 
 ### Accessing deployed application:
 - Please access the app using the deployed link: https://main--movie-muse.netlify.app/
-## Usage 
+## Usage <br />
 1)  User desires to find a movie to watch. <br />
 2)  User will access Movie Muse and is able to either: <br /> <br />
       - Scroll through the web application to pick from the most popular and/or top rated movies <br />
@@ -56,15 +56,16 @@ Then:
 
 
 ## Webpage Features
-### Screenshots, Videos, GIF
 
 ### Screenshot of App Desktop View
-- Screenshot
+![Desktop view of app landing hero page](../movie-muse/src/Components/assets/images/Moviemuse%20desktop%201.png)
+![Desktop view of app showing all movies](../movie-muse/src/Components/assets/images/Moviemuse%20desktop%202.png)
 
 ### GIF of App been used
-- Gif
+![Scrolling through app to show functions](../movie-muse/src/Components/assets/images/GIF%20Recording%202024-02-22.gif)
+
 ### GIF of App responsivness
-- Gif 2
+![Desktop App being resized to show responsiveness](../movie-muse/src/Components/assets/images/GIF%20Recording%202024-02-22%20Responsivness.gif)
 
 
 ## License
